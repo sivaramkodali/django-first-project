@@ -1,0 +1,14 @@
+
+{% extends "first_app/base.html" %}
+{% block body_block %}
+
+  <div class="container">
+
+
+  <h1>welcome to relatve url templates.</h1>
+  <a href="{% url 'first_app:users_page' %}">The Users Page</a> <br>
+  <a href="{% url 'admin:index' %}">The Admin Page</a><br>
+  <a href="{% url 'index' %}">The Index Page</a>
+  </div>
+
+{% endblock  %}

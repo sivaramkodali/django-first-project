@@ -1,0 +1,32 @@
+
+{% extends "first_app/base.html" %}
+{% load my_filters %}
+{% load staticfiles %}
+{% block  body_block %}
+
+<h1>Find the users!</h1>
+
+    {% if users_list %}
+<ol>
+
+
+    {% for users_rec in users_list %}
+    <li> Users Info</li>
+    <ul>
+      <li>First Name : {{users_rec.firstname|upper|add:'99'|cut_string:'99'}}</li>
+      <li>Last Name  : {{users_rec.lastname|lower}}</li>
+      <li>Email      : {{users_rec.email}}</li>
+    </ul>
+
+    {% endfor %}
+
+    {% else %}
+    <P>
+      No Users Exist!
+    </P>
+
+</ol>
+    {% endif %}
+
+
+{% endblock  %}

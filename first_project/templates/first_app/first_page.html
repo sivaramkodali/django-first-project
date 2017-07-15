@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static "/css/mystyle.css" %}">
+  </head>
+  <body>
+    <h1>This my second page!</h1>
+    {{ insert_me }}
+    <img src="{% static "images/aboutus.jpg" %}" alt="No img file found in static/images/aboutus.jpg">
+  </body>
+</html>
